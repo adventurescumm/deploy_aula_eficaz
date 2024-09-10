@@ -1,3 +1,11 @@
+# Adicionar arquivos e diretorios que você deseja ignorar no repositorio Git
+certificado_aiven/
+certificado_aiven/*
+
+*.cred
+*.pem
+.cred
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
