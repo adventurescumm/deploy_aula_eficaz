@@ -108,7 +108,7 @@ def cadastrar_aluno():
 
             # Obtém o ID do registro recém-inserido
             aluno_id = cursor.lastrowid
-            sucess = True
+            success = True
             
         except Error as err:
             # Em caso de erro na inserção, imprime a mensagem de erro
@@ -117,11 +117,13 @@ def cadastrar_aluno():
             # Fecha o cursor e a conexão para liberar recursos
             cursor.close()
             conn.close()
+
+
     if success:
         resp =  f"Aluno cadastrado com sucesso {aluno_id}"
         return resp, 201
     else:
-        resp =  {"erro": "Erro ao inserir aluno", "message": error}
+        resp =  {"erro": "Erro ao inserir aluno", "message": str(error)}
         return resp, 500
 
 
